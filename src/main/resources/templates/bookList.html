@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>Rafae Khan - Book List</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Book List as a table:</h1>
+	<table>
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Status</th>
+		</tr>
+		<tr th:each="aBook:${books}">
+			<td th:text="${aBook.getTitle}"></td>
+			<td th:text="${aBook.getAuthor}"></td>
+			<td th:text="${aBook.getStatus}"></td>
+		</tr>
+	</table>
+	<a href="/userInput">Add another book</a>
+	<br>
+	<a href="/index">Cancel</a>
+</body>
+</html>

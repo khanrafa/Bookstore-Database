@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>Rafae Khan - Book Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Search</h1>
+	
+	<form action="#" th:action="@{/userInput}" th:object="${book}"
+		method="get">
+		<p>
+			Title: <input type="text" th:field="*{title}" />
+		</p>
+		<p>
+			Author: <input type="text" th:field="*{author}" />
+		</p>
+		<p>
+			Status (available/borrowed): <input type="text" th:field="*{status}" />
+		</p>
+		<p>
+			<input type="submit" value="Submit" /> <br> <br> <input
+				type="reset" value="Reset" />
+		</p>
+	</form>
+	<a href="/index"> Main Page </a>
+</body>
+</html>

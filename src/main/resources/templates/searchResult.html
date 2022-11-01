@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>Rafae Khan - Search Results</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Search results as a table:</h1>
+	<table>
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Status</th>
+		</tr>
+		<tr th:each="aBook:${books}">
+			<td th:text="${aBook.getTitle}"></td>
+			<td th:text="${aBook.getAuthor}"></td>
+			<td th:text="${aBook.getStatus}"></td>
+		</tr>
+	</table>
+	<br>
+	<a href="/index">Cancel</a>
+</body>
+</html>
